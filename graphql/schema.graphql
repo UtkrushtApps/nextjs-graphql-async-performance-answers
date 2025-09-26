@@ -1,0 +1,17 @@
+type AssessmentResult {
+  id: ID!
+  candidateId: String!
+  assessmentId: String!
+  score: Float!
+  feedback: String!
+  status: String!
+  updatedAt: String!
+}
+
+type Query {
+  assessmentResult(id: ID!): AssessmentResult
+}
+
+type Mutation {
+  updateAssessmentResult(id: ID!, score: Float!, feedback: String!, status: String!): AssessmentResult
+}
